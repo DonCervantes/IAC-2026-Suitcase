@@ -1,32 +1,31 @@
 export const SITE = {
-  name: "cbiux",
-  creator: "Sebastián Ceciliano Piedra",
-  handle: "Cbiux",
-  x: "Cbiux_04",
-  xUrl: "https://x.com/Cbiux_04",
-  linkedinUrl: "https://www.linkedin.com/in/cbiux",
-  email: "jsebascp04@gmail.com",
-  telegram: "cbiux",
-  telegramUrl: "https://t.me/cbiux",
-  phone: "84358038",
-  phoneDisplay: "8435 8038",
-  whatsappUrl: "https://wa.me/50684358038",
+  name: "iac2026",
+  creator: "Daniel Adrian Elias Cruz Cervantes",
+  handle: "DonCervantes",
+  x: "tu-usuario",
+  xUrl: "https://x.com/",
+  linkedinUrl: "https://www.linkedin.com/",
+  instagramUrl: "https://www.instagram.com/",
+  email: "tu-email@example.com",
+  telegram: "tu-telegram",
+  telegramUrl: "https://t.me/",
+  phone: "",
+  phoneDisplay: "próximamente",
+  whatsappUrl: "https://wa.me/",
 } as const;
 
 export const PAYMENT_DEFAULTS = {
-  sinpePhone: "84358038",
-  evm: "0xC38555a1Afcd8394532Caa11D0be60Df166eC188",
-  stellar: "GAS52QOWKVBW2WYDRQ3KS4CSJ2QQNALPGURK2HLGJSNE2XUH7BH555BS",
+  sinpePhone: "",
+  evm: "",
+  stellar: "",
 } as const;
 
 export function getWallets() {
   const solana = process.env.NEXT_PUBLIC_USDC_SOLANA_ADDRESS?.trim() || "";
-  const evm =
-    process.env.NEXT_PUBLIC_USDC_BASE_ADDRESS?.trim() || PAYMENT_DEFAULTS.evm;
+  const evm = process.env.NEXT_PUBLIC_USDC_BASE_ADDRESS?.trim() || PAYMENT_DEFAULTS.evm;
   const stellar =
     process.env.NEXT_PUBLIC_USDC_STELLAR_ADDRESS?.trim() || PAYMENT_DEFAULTS.stellar;
-  const sinpe =
-    process.env.NEXT_PUBLIC_SINPE_PHONE?.trim() || PAYMENT_DEFAULTS.sinpePhone;
+  const sinpe = process.env.NEXT_PUBLIC_SINPE_PHONE?.trim() || PAYMENT_DEFAULTS.sinpePhone;
 
   return {
     sinpe,
@@ -34,7 +33,7 @@ export function getWallets() {
     base: evm,
     stellar,
     solana,
-    isDemo: false,
+    isDemo: !sinpe && !evm && !stellar,
   };
 }
 

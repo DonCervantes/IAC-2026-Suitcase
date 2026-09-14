@@ -231,6 +231,9 @@ export function Footer() {
         <a href={SITE.xUrl} target="_blank" rel="noreferrer">
           X
         </a>
+        <a href={SITE.instagramUrl} target="_blank" rel="noreferrer">
+          Instagram
+        </a>
         <a href={SITE.linkedinUrl} target="_blank" rel="noreferrer">
           LinkedIn
         </a>

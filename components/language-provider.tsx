@@ -11,13 +11,13 @@ type LanguageContextValue = {
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
-const EVENT = "cbiux-locale";
+const EVENT = "iac-locale";
 
 function readLocale(): Locale {
   if (typeof window === "undefined") return "es";
   const query = new URLSearchParams(window.location.search).get("lang");
   if (query === "en" || query === "es") return query;
-  const stored = window.localStorage.getItem("cbiux-locale");
+  const stored = window.localStorage.getItem("iac-locale");
   return stored === "en" || stored === "es" ? stored : "es";
 }
 
@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const locale = useSyncExternalStore(subscribe, readLocale, () => "es" as Locale);
 
   const setLocale = (next: Locale) => {
-    window.localStorage.setItem("cbiux-locale", next);
+    window.localStorage.setItem("iac-locale", next);
     const url = new URL(window.location.href);
     url.searchParams.set("lang", next);
     window.history.replaceState({}, "", url);

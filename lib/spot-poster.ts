@@ -9,7 +9,7 @@ import {
   NAVY,
   WHITE,
   canvasToPng,
-  drawCbiuxMark,
+  drawBrandMark,
   drawContained,
   loadImage,
   makePosterCanvas,
@@ -40,7 +40,7 @@ const FACE_LABEL: Record<Locale, Record<Face, string>> = {
 };
 
 export function spotFilename(sponsor: string, positionId: number) {
-  return `cbiux-espacio-${padSpot(positionId)}-${slugBrand(sponsor)}.png`;
+  return `iac-espacio-${padSpot(positionId)}-${slugBrand(sponsor)}.png`;
 }
 
 export function spotCaption(sponsor: string, positionId: number, locale: Locale = "es") {
@@ -53,16 +53,16 @@ export function spotCaption(sponsor: string, positionId: number, locale: Locale 
     return `This is my space on @${SITE.x}'s cabin bag.
 
 ${brand} · spot ${spot} · ${face}${size ? ` · ${size}` : ""}.
-Traveling from Costa Rica to Compile Amsterdam, Europe and Devcon India.
+Traveling from Mexico to IAC 2026 in Antalya.
 
-Daily vlog of the whole trip.`;
+The trip story from UNAM to the Congress.`;
   }
-  return `Este es mi espacio en la maleta de cabina de @${SITE.x}.
+  return `Este es mi espacio en la maleta de @${SITE.x}.
 
 ${brand} · posición ${spot} · ${face}${size ? ` · ${size}` : ""}.
-Viaja de Costa Rica a Compile Amsterdam, Europa y Devcon India.
+Viaja de México al IAC 2026 en Antalya.
 
-Vlog diario de todo el trip.`;
+Historia del viaje al Congreso.`;
 }
 
 export async function renderSpotPng(input: {
@@ -77,12 +77,12 @@ export async function renderSpotPng(input: {
   const [logo, suitcase] = await Promise.all([loadImage(input.logoSrc), loadImage(photo.src)]);
   const { canvas, ctx } = makePosterCanvas();
 
-  drawCbiuxMark(ctx, 72, 44, 52);
+  drawBrandMark(ctx, 72, 44, 52);
   ctx.fillStyle = BLUE;
   ctx.font = "700 20px Inter, system-ui, sans-serif";
   ctx.letterSpacing = "4px";
   ctx.textAlign = "left";
-  ctx.fillText("cbiux", 138, 78);
+  ctx.fillText("iac2026", 138, 78);
 
   ctx.fillStyle = MUTED;
   ctx.font = "700 20px 'JetBrains Mono', ui-monospace, monospace";
@@ -127,10 +127,10 @@ export async function renderSpotPng(input: {
   ctx.letterSpacing = "0px";
   ctx.fillStyle = NAVY;
   ctx.font = "600 28px Inter, system-ui, sans-serif";
-  ctx.fillText("en la maleta de cabina de Cbiux", 72, 1158);
+  ctx.fillText("en la maleta rumbo al IAC 2026", 72, 1158);
   ctx.fillStyle = MUTED;
   ctx.font = "500 24px Inter, system-ui, sans-serif";
-  ctx.fillText("Costa Rica → Europa → India", 72, 1198);
+  ctx.fillText("México → Europa → Antalya", 72, 1198);
 
   ctx.fillStyle = BLUE;
   ctx.font = "700 22px Inter, system-ui, sans-serif";
@@ -141,7 +141,7 @@ export async function renderSpotPng(input: {
   ctx.font = "600 20px Inter, system-ui, sans-serif";
   ctx.letterSpacing = "0px";
   ctx.textAlign = "right";
-  ctx.fillText("cbiux-suitcase.vercel.app", 1008, 1288);
+  ctx.fillText("localhost:43147", 1008, 1288);
 
   const blob = await canvasToPng(canvas);
   if (!blob) throw new Error("PNG");

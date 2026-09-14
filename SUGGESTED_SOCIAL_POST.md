@@ -1,21 +1,19 @@
-# Posts sugeridos — campaña maleta Cbiux
+# Posts sugeridos — IAC 2026 Suitcase
 
-Adjuntá `public/social-post.png` (1200×675) en X y LinkedIn.
+Adjunta `public/promo.png` o la imagen OG en X, Instagram y LinkedIn.
 
 ## X — español
 
 ```
-Voy de Costa Rica a Europa y después a India.
+Voy de México al IAC 2026 en Antalya, Turquía.
 
-Compile Amsterdam → land route → Lisbon (HackMeridian) → Devcon volunteer.
+Soy Daniel, estudiante de Ingeniería Aeroespacial en la UNAM. Mi trabajo “The Societal Impact of Commercial Spaceflight” fue aceptado en el 37th IAA Symposium on Space and Society.
 
-Para financiar trenes, hostales y comida estoy vendiendo espacio en mi maleta de cabina (55×40×20 cm). No es una de bodega.
+Para financiar el viaje estoy ofreciendo espacios de patrocinio en mi equipaje.
 
-22 posiciones. Desde $45. USDC en Solana o Base.
+22 posiciones. Meta $14,999 MXN. SPEI o USDC.
 
-Pensado para marcas ticas, startups y teams de crypto/tech.
-
-Poné tu logo en mi maleta de cabina.
+Lleva tu marca conmigo al IAC 2026.
 
 [link]
 ```
@@ -23,10 +21,9 @@ Poné tu logo en mi maleta de cabina.
 Versión corta:
 
 ```
-Poné tu logo en mi maleta de cabina.
+Tu marca, rumbo al IAC 2026.
 
-CR → Compile Amsterdam → Europa → Devcon India.
-Carry-on 55×40×20. 22 spots. Desde $45. USDC.
+México → Europa → Antalya. 22 spots. Meta $14,999 MXN.
 
 [link]
 ```
@@ -34,13 +31,13 @@ Carry-on 55×40×20. 22 spots. Desde $45. USDC.
 ## X — English
 
 ```
-Builder from Costa Rica. Flying SJO → Amsterdam for Compile, then overland through Europe, Lisbon for HackMeridian, and India as a Devcon volunteer.
+I'm heading from Mexico to IAC 2026 in Antalya, Turkey.
 
-I'm selling ad space on my carry-on cabin bag (55×40×20 cm) to fund the land trip.
+I'm Daniel, an Aerospace Engineering student at UNAM. My paper “The Societal Impact of Commercial Spaceflight” was accepted at the 37th IAA Symposium on Space and Society.
 
-22 spots. From $45. USDC on Solana or Base.
+I'm offering sponsorship spots on my suitcase to help fund the trip.
 
-Made for CR SMEs and crypto/tech teams — not a $10k booth.
+22 positions. Goal $14,999 MXN. SPEI or USDC.
 
 [link]
 ```
@@ -48,9 +45,9 @@ Made for CR SMEs and crypto/tech teams — not a $10k booth.
 Short:
 
 ```
-Put your brand on my road to Europe & India.
+Take your brand to IAC 2026.
 
-22 carry-on cabin spots. From $45. USDC.
+Mexico → Europe → Antalya. 22 spots. Goal $14,999 MXN.
 
 [link]
 ```
@@ -58,13 +55,15 @@ Put your brand on my road to Europe & India.
 ## LinkedIn — español
 
 ```
-Este septiembre salgo de San José a Amsterdam para Compile (Cursor / SpaceXAI). Después me voy por tierra: Bruselas, Alemania, Berlín, Praga, Madrid, Lisbon (HackMeridian + Meridian) e India como voluntario de Devcon.
+Este año tengo la oportunidad de participar en el International Astronautical Congress 2026 (IAC 2026) en Antalya, Turquía.
 
-Para que el land trip se pague solo, estoy vendiendo espacio publicitario en mi maleta de cabina (55×40×20 cm). 22 posiciones numeradas, desde $45, pago en USDC.
+Soy Daniel Adrian Elias Cruz Cervantes, estudiante de Ingeniería Aeroespacial de la Facultad de Ingeniería de la UNAM. Mi trabajo “The Societal Impact of Commercial Spaceflight” fue aceptado en el 37th IAA Symposium on Space and Society.
 
-El paquete es simple: logo en la cabina todo el viaje, 3 piezas de contenido (packing/vlog, thank-you post, recap) y tag en X + LinkedIn.
+Para financiar transporte, hospedaje y la presentación, ofrezco espacios de patrocinio en mi equipaje. Tu logo viaja conmigo: México → Europa → Antalya → IAC 2026 → México.
 
-Si tenés una marca tica, un estudio o un producto que quiera existir en esa ruta — escribime o reservá un spot.
+22 posiciones. Meta $14,999 MXN. SPEI o USDC.
+
+Si tu marca, startup o comunidad quiere formar parte de este camino, reserva un espacio.
 
 [link]
 ```
@@ -72,15 +71,15 @@ Si tenés una marca tica, un estudio o un producto que quiera existir en esa rut
 ## LinkedIn — English
 
 ```
-I'm Sebastián (Cbiux), a builder from Costa Rica and SpaceXAI ambassador.
+This year I will take part in the International Astronautical Congress 2026 (IAC 2026) in Antalya, Turkey.
 
-Sep 20 I fly SJO → Amsterdam for Compile. Then overland through Europe, Lisbon for HackMeridian, and India as a Devcon volunteer.
+I'm Daniel Adrian Elias Cruz Cervantes, an Aerospace Engineering student at UNAM. My paper “The Societal Impact of Commercial Spaceflight” was accepted at the 37th IAA Symposium on Space and Society.
 
-To fund food, hostels, trains and print, I'm selling 22 numbered ad spots on my carry-on cabin bag (55×40×20 cm). From $45. USDC on Solana or Base.
+To help fund travel, lodging and the presentation, I'm offering sponsorship spots on my suitcase. Your logo rides with me: Mexico → Europe → Antalya → IAC 2026 → Mexico.
 
-Every sponsor gets the logo for the whole arc, three content pieces, and a named tag on X + LinkedIn.
+22 positions. Goal $14,999 MXN. SPEI or USDC.
 
-If you're a Costa Rican SME or a crypto/tech team that wants to ride that route, claim a spot.
+If your brand, startup or community wants to be part of this path, claim a spot.
 
 [link]
 ```

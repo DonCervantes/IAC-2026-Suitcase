@@ -10,7 +10,7 @@ export type CheckoutGrant = {
 };
 
 function secret() {
-  return process.env.CHECKOUT_SECRET || process.env.ADMIN_PASSWORD || "cbiux-checkout-dev";
+  return process.env.CHECKOUT_SECRET || process.env.ADMIN_PASSWORD || "iac-checkout-dev";
 }
 
 export function issueCheckoutGrant(input: {

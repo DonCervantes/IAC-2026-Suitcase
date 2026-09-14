@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useMemo, useSyncExternalStore } from "react";
+import { createContext, useContext, useMemo, useSyncExternalStore, type ReactNode } from "react";
 import { formatMoney } from "@/lib/currency";
 import type { Currency } from "@/lib/types";
 
@@ -11,15 +11,15 @@ type CurrencyContextValue = {
 };
 
 const CurrencyContext = createContext<CurrencyContextValue | null>(null);
-const STORAGE_KEY = "cbiux-currency";
-const EVENT = "cbiux-currency";
+const STORAGE_KEY = "iac-currency";
+const EVENT = "iac-currency";
 
 function readCurrency(): Currency {
-  if (typeof window === "undefined") return "usd";
+  if (typeof window === "undefined") return "mxn";
   const query = new URLSearchParams(window.location.search).get("currency");
-  if (query === "usd" || query === "crc") return query;
+  if (query === "usd" || query === "mxn") return query;
   const stored = window.localStorage.getItem(STORAGE_KEY);
-  return stored === "usd" || stored === "crc" ? stored : "usd";
+  return stored === "usd" || stored === "mxn" ? stored : "mxn";
 }
 
 function subscribe(callback: () => void) {
@@ -31,8 +31,8 @@ function subscribe(callback: () => void) {
   };
 }
 
-export function CurrencyProvider({ children }: { children: React.ReactNode }) {
-  const currency = useSyncExternalStore(subscribe, readCurrency, () => "usd" as Currency);
+export function CurrencyProvider({ children }: { children: ReactNode }) {
+  const currency = useSyncExternalStore(subscribe, readCurrency, () => "mxn" as Currency);
 
   const setCurrency = (next: Currency) => {
     window.localStorage.setItem(STORAGE_KEY, next);

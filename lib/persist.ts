@@ -2,8 +2,8 @@ import { promises as fs } from "fs";
 import path from "path";
 import type { StoreShape } from "./types";
 
-const REDIS_KEY = "cbiux-store";
-const NEON_KEY = "cbiux-store";
+const REDIS_KEY = "iac-2026-store";
+const NEON_KEY = "iac-2026-store";
 
 function neonConfigured() {
   return Boolean(process.env.DATABASE_URL?.trim());
@@ -17,7 +17,7 @@ function redisConfigured() {
 
 function filePath() {
   if (process.env.STORE_PATH) return process.env.STORE_PATH;
-  if (process.env.VERCEL === "1") return path.join("/tmp", "cbiux-store.json");
+  if (process.env.VERCEL === "1") return path.join("/tmp", "iac-2026-store.json");
   return path.join(process.cwd(), "data", "store.json");
 }
 

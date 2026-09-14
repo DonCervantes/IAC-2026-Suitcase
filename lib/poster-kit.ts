@@ -51,7 +51,7 @@ export function roundRect(
   ctx.closePath();
 }
 
-export function drawCbiuxMark(
+export function drawBrandMark(
   ctx: CanvasRenderingContext2D,
   x: number,
   y: number,

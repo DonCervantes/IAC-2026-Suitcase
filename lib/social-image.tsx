@@ -5,7 +5,7 @@ import { join } from "node:path";
 export const ogSize = { width: 1200, height: 630 };
 export const promoSize = { width: 1080, height: 1080 };
 export const ogAlt =
-  "cbiux: 22 posiciones en una maleta de cabina rumbo a Europa e India. Desde $45.";
+  "iac2026: 22 posiciones en una maleta rumbo al IAC 2026 en Antalya. Meta $14,999 MXN.";
 
 const SPOTS = [
   { id: "01", left: "23.8%", top: "27.6%", width: "52.8%", height: "17.18%" },
@@ -52,7 +52,7 @@ function Logo() {
           color: "#0b1b4a",
         }}
       >
-        cbiux
+        iac2026
       </div>
     </div>
   );
@@ -71,7 +71,7 @@ function Headline({ large }: { large?: boolean }) {
           color: "#0b1b4a",
         }}
       >
-        Tu marca, en mi ruta a
+        Tu marca, rumbo al
       </div>
       <div
         style={{
@@ -83,7 +83,7 @@ function Headline({ large }: { large?: boolean }) {
           color: "#2c3fd1",
         }}
       >
-        Europa e India
+        IAC 2026
       </div>
     </div>
   );
@@ -223,7 +223,7 @@ export async function renderOgImage() {
             maxWidth: 560,
           }}
         >
-          22 spots en mi maleta de cabina. Vlog diario de Costa Rica a Devcon.
+          22 spots en mi maleta rumbo al IAC 2026. México → Antalya.
         </div>
         <div style={{ display: "flex", marginTop: 28 }}>
           <Stats />
@@ -238,7 +238,7 @@ export async function renderOgImage() {
             color: "#2c3fd1",
           }}
         >
-          SINPE · USDC · cbiux-suitcase.vercel.app
+          SPEI · USDC · IAC 2026
         </div>
       </div>
       <div
@@ -314,7 +314,7 @@ export async function renderPromoImage() {
           color: "#2c3fd1",
         }}
       >
-        SINPE · USDC · cbiux-suitcase.vercel.app
+        SPEI · USDC · IAC 2026
       </div>
     </div>,
     { ...promoSize },

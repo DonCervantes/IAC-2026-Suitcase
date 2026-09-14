@@ -3,7 +3,7 @@ export type ApproachPhase = "idle" | "approaching" | "focused" | "returning";
 export type SpotStatus = "available" | "reserved" | "sold";
 export type PaymentNetwork = "sinpe" | "evm" | "stellar" | "solana";
 export type Locale = "es" | "en";
-export type Currency = "usd" | "crc";
+export type Currency = "usd" | "mxn";
 export type SizeTier = "presenting" | "premium" | "mid" | "side";
 
 export type PositionCatalog = {

@@ -16,7 +16,7 @@ export function CurrencyToggle() {
       {(
         [
           { id: "usd", short: "$", label: dict.currency.usd },
-          { id: "crc", short: "₡", label: dict.currency.crc },
+          { id: "mxn", short: "MX$", label: dict.currency.mxn },
         ] as const
       ).map((option) => (
         <button
@@ -24,8 +24,8 @@ export function CurrencyToggle() {
           type="button"
           onClick={() => setCurrency(option.id)}
           aria-pressed={currency === option.id}
-          aria-label={option.id === "usd" ? dict.currency.usdName : dict.currency.crcName}
-          title={option.id === "usd" ? dict.currency.usdName : dict.currency.crcName}
+          aria-label={option.id === "usd" ? dict.currency.usdName : dict.currency.mxnName}
+          title={option.id === "usd" ? dict.currency.usdName : dict.currency.mxnName}
           className={`min-h-11 px-2.5 font-mono text-[10px] font-semibold tracking-[0.12em] ${
             currency === option.id ? "bg-foreground text-background" : "text-muted-foreground"
           }`}

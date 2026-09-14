@@ -238,7 +238,7 @@ function downloadName(src: string, sponsor: string, positionId: number, kind: Ki
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "") || "logo";
   const spot = padSpot(positionId);
-  return kind === "comprobante" ? `cbiux-${spot}-${brand}-comprobante.${ext}` : `cbiux-${spot}-${brand}.${ext}`;
+  return kind === "comprobante" ? `iac-${spot}-${brand}-comprobante.${ext}` : `iac-${spot}-${brand}.${ext}`;
 }
 
 async function downloadBlob(src: string, filename: string, apiHref: string) {

@@ -3,8 +3,8 @@ import type { Face, PositionCatalog } from "./types";
 export const FACE_ORDER: Face[] = ["front", "back", "right", "left"];
 
 export const TRIP = {
-  window: "20 Sep – early Nov 2026",
-  salesClose: "10 Oct 2026",
+  window: "IAC 2026 · Antalya",
+  salesClose: "antes del IAC 2026",
   artworkDays: 5,
   startPrice: 45,
   spotCount: 22,

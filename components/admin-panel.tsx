@@ -47,9 +47,9 @@ export function AdminLogin() {
         <ThemeToggle />
       </div>
       <p className="mono-label text-primary">admin</p>
-      <h1 className="mt-3 text-3xl font-semibold tracking-tight">Cbiux · Suitcase</h1>
+      <h1 className="mt-3 text-3xl font-semibold tracking-tight">IAC 2026 · Suitcase</h1>
       <p className="mt-2 text-sm text-muted-foreground">
-        Entrá con la contraseña para ver solicitudes y aceptarlas.
+        Entra con la contraseña para ver solicitudes y aceptarlas.
       </p>
       <form className="mt-8 space-y-4" onSubmit={login}>
         <div className="space-y-2">
@@ -126,7 +126,7 @@ export function AdminBoard({ initial }: { initial: AdminData }) {
           <p className="mono-label text-primary">admin</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight">Solicitudes</h1>
           <p className="mt-2 max-w-[52ch] text-sm text-muted-foreground">
-            Revisá reservas, comprobantes SINPE y ofertas libres. Aceptá para marcar vendido, o rechazá para
+            Revisa reservas, comprobantes SPEI y ofertas libres. Acepta para marcar vendido, o rechaza para
             liberar el spot. Para coordinar diseño o pago: WhatsApp {SITE.phoneDisplay} o Telegram @{SITE.telegram}.
           </p>
           <div className="mt-3">
@@ -253,7 +253,7 @@ export function AdminBoard({ initial }: { initial: AdminData }) {
                     </p>
                     {spot.email ? (
                       <a
-                        href={`mailto:${spot.email}?subject=${encodeURIComponent(`Cbiux suitcase · posición ${padSpot(spot.id)}`)}`}
+                        href={`mailto:${spot.email}?subject=${encodeURIComponent(`IAC 2026 suitcase · posición ${padSpot(spot.id)}`)}`}
                         className="mt-1 block text-sm text-primary underline-offset-2 hover:underline"
                       >
                         {spot.email}
@@ -309,7 +309,7 @@ export function AdminBoard({ initial }: { initial: AdminData }) {
                     />
                   ) : (
                     <p className="text-xs text-muted-foreground">
-                      {spot.network === "sinpe" ? "SINPE sin captura todavía." : "Esperando pago o comprobante."}
+                      {spot.network === "sinpe" ? "SPEI sin captura todavía." : "Esperando pago o comprobante."}
                     </p>
                   )}
                 </div>

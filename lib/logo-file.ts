@@ -25,8 +25,8 @@ export function artworkFileMeta(
   const spot = positionId ? padSpot(positionId) : "00";
   const filename =
     kind === "comprobante"
-      ? `cbiux-${spot}-${brand}-comprobante.${ext}`
-      : `cbiux-${spot}-${brand}.${ext}`;
+      ? `iac-${spot}-${brand}-comprobante.${ext}`
+      : `iac-${spot}-${brand}.${ext}`;
   return {
     mime,
     ext,

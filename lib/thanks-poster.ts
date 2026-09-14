@@ -9,7 +9,7 @@ import {
   NAVY,
   POSTER,
   canvasToPng,
-  drawCbiuxMark,
+  drawBrandMark,
   drawContained,
   loadImage,
   makePosterCanvas,
@@ -21,7 +21,7 @@ export const THANKS_POSTER = POSTER;
 export { thanksBrand };
 
 export function thanksFilename(sponsor: string, positionId: number) {
-  return `cbiux-gracias-${padSpot(positionId)}-${slugBrand(sponsor)}.png`;
+  return `iac-gracias-${padSpot(positionId)}-${slugBrand(sponsor)}.png`;
 }
 
 export function thanksCaption(sponsor: string, positionId: number, locale: Locale = "es") {
@@ -30,15 +30,15 @@ export function thanksCaption(sponsor: string, positionId: number, locale: Local
   if (locale === "en") {
     return `Thank you to ${brand} for traveling with me.
 
-Their logo is on spot ${spot} of my cabin bag, from Costa Rica to Compile Amsterdam, Europe and Devcon India.
+Their logo is on spot ${spot} of my suitcase, from Mexico to IAC 2026 in Antalya.
 
-Daily vlog of the whole trip.
+The trip story from UNAM to the Congress.
 
 @${SITE.x}`;
   }
   return `Gracias a ${brand} por viajar conmigo.
 
-Su logo va en la posición ${spot} de mi maleta de cabina, de Costa Rica a Compile Amsterdam, Europa y Devcon India.
+Su logo va en la posición ${spot} de mi maleta, de México al IAC 2026 en Antalya.
 
 Vlog diario de todo el trip.
 
@@ -54,12 +54,12 @@ export async function renderThanksPng(input: {
   const logo = await loadImage(input.logoSrc);
   const { canvas, ctx } = makePosterCanvas();
 
-  drawCbiuxMark(ctx, 72, 48, 56);
+  drawBrandMark(ctx, 72, 48, 56);
   ctx.fillStyle = BLUE;
   ctx.font = "700 22px Inter, system-ui, sans-serif";
   ctx.letterSpacing = "4px";
   ctx.textAlign = "left";
-  ctx.fillText("cbiux", 144, 86);
+  ctx.fillText("iac2026", 144, 86);
 
   ctx.fillStyle = MUTED;
   ctx.font = "700 22px 'JetBrains Mono', ui-monospace, monospace";
@@ -84,7 +84,7 @@ export async function renderThanksPng(input: {
 
   ctx.fillStyle = NAVY;
   ctx.font = "600 32px Inter, system-ui, sans-serif";
-  ctx.fillText("Costa Rica → Europa → India", 72, 398);
+  ctx.fillText("México → IAC 2026", 72, 398);
 
   roundRect(ctx, 120, 470, 840, 540, 44);
   ctx.fillStyle = plateColorFromImage(logo);
@@ -97,7 +97,7 @@ export async function renderThanksPng(input: {
 
   ctx.fillStyle = MUTED;
   ctx.font = "400 26px Inter, system-ui, sans-serif";
-  ctx.fillText("Compile Amsterdam · Devcon India", 72, 1162);
+  ctx.fillText("México · IAC 2026 Antalya", 72, 1162);
 
   ctx.fillStyle = BLUE;
   ctx.font = "700 24px Inter, system-ui, sans-serif";
@@ -108,7 +108,7 @@ export async function renderThanksPng(input: {
   ctx.font = "600 22px Inter, system-ui, sans-serif";
   ctx.letterSpacing = "0px";
   ctx.textAlign = "right";
-  ctx.fillText("cbiux-suitcase.vercel.app", 1008, 1268);
+  ctx.fillText("localhost:43147", 1008, 1268);
 
   const blob = await canvasToPng(canvas);
   if (!blob) throw new Error("PNG");

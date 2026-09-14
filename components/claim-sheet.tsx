@@ -80,8 +80,8 @@ function ClaimBody({ selected, mobile }: { selected: LivePosition; mobile: boole
   const shareText = useMemo(() => {
     const n = padSpot(selected.id);
     return locale === "es"
-      ? `Acabo de poner el logo de ${brandName || "mi marca"} en la maleta de cabina de @${SITE.x} rumbo a Europa e India. Posición ${n}.\n\nCarry-on 55×40×20 · 22 spots · desde ${formatMoney(45, currency)} · USDC`
-      : `Just put ${brandName || "our"} logo on @${SITE.x}'s carry-on cabin bag to Europe & India. Position ${n}.\n\nCabin 55×40×20 · 22 spots · from ${formatMoney(45, currency)} · USDC`;
+      ? `Acabo de poner el logo de ${brandName || "mi marca"} en el equipaje rumbo al IAC 2026 en Antalya. Posición ${n}.\n\nMéxico → Europa → Turquía · 22 spots · desde ${formatMoney(45, currency)}`
+      : `Just put ${brandName || "our"} logo on the suitcase heading to IAC 2026 in Antalya. Position ${n}.\n\nMexico → Europe → Turkey · 22 spots · from ${formatMoney(45, currency)}`;
   }, [selected, brandName, locale, currency]);
 
   const spec = artworkSpec(selected.size);
@@ -170,7 +170,7 @@ function ClaimBody({ selected, mobile }: { selected: LivePosition; mobile: boole
   }
 
   function grantKey(id: number) {
-    return `cbiux-grant-${id}`;
+    return `iac-grant-${id}`;
   }
 
   function rememberGrant(id: number, token: string) {
@@ -346,7 +346,7 @@ function ClaimBody({ selected, mobile }: { selected: LivePosition; mobile: boole
           {format(selected.price)}
         </div>
         <p className="mt-1 text-sm text-muted-foreground">
-          {currency === "crc" ? `≈ $${selected.price} USD` : `≈ ${formatMoney(selected.price, "crc")}`}
+          {currency === "mxn" ? `≈ $${selected.price} USD` : `≈ ${formatMoney(selected.price, "mxn")}`}
         </p>
         <p className="mt-1 text-xs text-muted-foreground">{dict.currency.rateNote}</p>
         <p className="mt-2 text-sm text-muted-foreground">
@@ -460,7 +460,7 @@ function ClaimBody({ selected, mobile }: { selected: LivePosition; mobile: boole
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={qr}
-                alt={network === "sinpe" ? "SINPE QR" : "USDC QR"}
+                alt={network === "sinpe" ? "SPEI QR" : "USDC QR"}
                 className="mx-auto h-40 w-40 rounded-xl border border-border"
               />
             ) : null}

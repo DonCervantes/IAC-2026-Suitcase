@@ -458,7 +458,7 @@ function SpotOverlay({
             className={`spot-price font-mono font-semibold leading-none ${
               sold ? "text-[#147a4b]" : held ? "text-[#6b4f00]" : "text-[#3d3d3d]"
             } ${
-              currency === "crc"
+              currency === "mxn"
                 ? side
                   ? "text-[8px]"
                   : banner

@@ -1,62 +1,17 @@
-export const PLACE_IDS = [
-  "sjo",
-  "ams",
-  "bru",
-  "cgn",
-  "ber",
-  "prg",
-  "pfz",
-  "nyn",
-  "mad",
-  "lis",
-  "dxb",
-  "del",
-  "agr",
-  "bom",
-] as const;
+export const PLACE_IDS = ["mex", "mad", "ayt"] as const;
 
 export type PlaceId = (typeof PLACE_IDS)[number];
 
 export const PLACES: Record<PlaceId, { lat: number; lng: number }> = {
-  sjo: { lat: 9.9281, lng: -84.0907 },
-  ams: { lat: 52.3676, lng: 4.9041 },
-  bru: { lat: 50.8503, lng: 4.3517 },
-  cgn: { lat: 50.9375, lng: 6.9603 },
-  ber: { lat: 52.52, lng: 13.405 },
-  prg: { lat: 50.0755, lng: 14.4378 },
-  pfz: { lat: 48.8945, lng: 8.7047 },
-  nyn: { lat: 46.3833, lng: 6.2396 },
+  mex: { lat: 19.4326, lng: -99.1332 },
   mad: { lat: 40.4168, lng: -3.7038 },
-  lis: { lat: 38.7223, lng: -9.1393 },
-  dxb: { lat: 25.2048, lng: 55.2708 },
-  del: { lat: 28.6139, lng: 77.209 },
-  agr: { lat: 27.1751, lng: 78.0421 },
-  bom: { lat: 19.076, lng: 72.8777 },
+  ayt: { lat: 36.8969, lng: 30.7133 },
 };
 
-/** Dubái → Mumbai, luego Delhi y Agra; la vuelta sale otra vez de Mumbai. */
-export const ROUTE_VISITS: PlaceId[] = [
-  "sjo",
-  "ams",
-  "bru",
-  "cgn",
-  "ber",
-  "prg",
-  "pfz",
-  "nyn",
-  "mad",
-  "lis",
-  "dxb",
-  "bom",
-  "del",
-  "agr",
-  "bom",
-  "dxb",
-  "mad",
-  "sjo",
-];
+/** México → Europa → Antalya (IAC 2026) → México */
+export const ROUTE_VISITS: PlaceId[] = ["mex", "mad", "ayt", "mex"];
 
-export const OUTBOUND_HOPS = 14;
+export const OUTBOUND_HOPS = 2;
 
 export type RoutePoint = {
   id: PlaceId;

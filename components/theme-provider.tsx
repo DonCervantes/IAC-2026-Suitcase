@@ -4,8 +4,8 @@ import { createContext, useContext, useEffect, useMemo, useSyncExternalStore } f
 
 export type Theme = "light" | "dark";
 
-const STORAGE_KEY = "cbiux-theme";
-const EVENT = "cbiux-theme";
+const STORAGE_KEY = "iac-theme";
+const EVENT = "iac-theme";
 
 type ThemeContextValue = {
   theme: Theme;

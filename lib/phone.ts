@@ -10,6 +10,6 @@ export function phoneLooksValid(value: string) {
 export function whatsappHref(phone: string) {
   const digits = digitsOnly(phone);
   if (!digits) return "";
-  const intl = digits.length === 8 ? `506${digits}` : digits.replace(/^00/, "");
+  const intl = digits.length === 10 ? `52${digits}` : digits.replace(/^00/, "");
   return `https://wa.me/${intl}`;
 }

@@ -1,10 +1,10 @@
 import { createHmac, timingSafeEqual } from "crypto";
 import { cookies } from "next/headers";
 
-const COOKIE = "cbiux_admin";
+const COOKIE = "iac_admin";
 
 function secret() {
-  return process.env.ADMIN_PASSWORD || "123Cbiux@#$";
+  return process.env.ADMIN_PASSWORD || "IAC2026admin";
 }
 
 export function adminConfigured() {
@@ -12,7 +12,7 @@ export function adminConfigured() {
 }
 
 export function signAdminToken() {
-  return createHmac("sha256", secret()).update("cbiux-admin-session").digest("hex");
+  return createHmac("sha256", secret()).update("iac-admin-session").digest("hex");
 }
 
 export function passwordMatches(password: string) {

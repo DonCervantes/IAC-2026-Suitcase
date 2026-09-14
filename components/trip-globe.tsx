@@ -87,8 +87,8 @@ export default function TripGlobe({
   const rings = useMemo(() => {
     if (!activeCoords) {
       return [
-        { lat: PLACES.sjo.lat, lng: PLACES.sjo.lng },
-        { lat: PLACES.bom.lat, lng: PLACES.bom.lng },
+        { lat: PLACES.mex.lat, lng: PLACES.mex.lng },
+        { lat: PLACES.ayt.lat, lng: PLACES.ayt.lng },
       ];
     }
     return [{ lat: activeCoords.lat, lng: activeCoords.lng }];
