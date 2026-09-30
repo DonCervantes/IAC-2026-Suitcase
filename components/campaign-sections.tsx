@@ -132,11 +132,9 @@ function AddressCard({
       <p className="mt-2 text-sm text-muted-foreground">{hint}</p>
       <p className="mt-4 break-all font-mono text-[13px] leading-relaxed">{value}</p>
       {extra}
-      {inactive ? null : (
-        <div className="mt-5">
-          <CopyButton value={value} label={copyLabel} />
-        </div>
-      )}
+      <div className="mt-5">
+        <CopyButton value={value} label={copyLabel} />
+      </div>
     </article>
   );
 }
