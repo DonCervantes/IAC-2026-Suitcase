@@ -109,8 +109,8 @@ const campaign = {
     },
     route: {
       kicker: "el recorrido",
-      title: "México, Europa, Antalya",
-      body: "El globo muestra el arco del viaje: Ciudad de México, una escala en Europa y el IAC 2026 en Antalya.",
+      title: "México, Antalya",
+      body: "El globo muestra el arco del viaje: de Ciudad de México al IAC 2026 en Antalya.",
       hint: "Arrastra · zoom con la rueda · toca una parada",
       zoomIn: "Acercar el mundo",
       zoomOut: "Alejar el mundo",
@@ -118,7 +118,6 @@ const campaign = {
       pause: "PAUSAR",
       stops: [
         { city: "Ciudad de México", region: "México", note: "Salida" },
-        { city: "Madrid", region: "España", note: "Escala Europa" },
         { city: "Antalya", region: "Turquía", note: "IAC 2026" },
         { city: "Ciudad de México", region: "México", note: "Vuelta" },
       ],
@@ -231,8 +230,8 @@ const campaign = {
     },
     route: {
       kicker: "the route",
-      title: "Mexico, Europe, Antalya",
-      body: "The globe shows the trip arc: Mexico City, a Europe stopover and IAC 2026 in Antalya.",
+      title: "Mexico, Antalya",
+      body: "The globe shows the trip arc: from Mexico City to IAC 2026 in Antalya.",
       hint: "Drag · scroll to zoom · tap a stop",
       zoomIn: "Zoom in",
       zoomOut: "Zoom out",
@@ -240,7 +239,6 @@ const campaign = {
       pause: "PAUSE",
       stops: [
         { city: "Mexico City", region: "Mexico", note: "Departure" },
-        { city: "Madrid", region: "Spain", note: "Europe stopover" },
         { city: "Antalya", region: "Turkey", note: "IAC 2026" },
         { city: "Mexico City", region: "Mexico", note: "Return" },
       ],

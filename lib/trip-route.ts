@@ -1,17 +1,16 @@
-export const PLACE_IDS = ["mex", "mad", "ayt"] as const;
+export const PLACE_IDS = ["mex", "ayt"] as const;
 
 export type PlaceId = (typeof PLACE_IDS)[number];
 
 export const PLACES: Record<PlaceId, { lat: number; lng: number }> = {
   mex: { lat: 19.4326, lng: -99.1332 },
-  mad: { lat: 40.4168, lng: -3.7038 },
   ayt: { lat: 36.8969, lng: 30.7133 },
 };
 
-/** México → Europa → Antalya (IAC 2026) → México */
-export const ROUTE_VISITS: PlaceId[] = ["mex", "mad", "ayt", "mex"];
+/** México → Antalya (IAC 2026) → México */
+export const ROUTE_VISITS: PlaceId[] = ["mex", "ayt", "mex"];
 
-export const OUTBOUND_HOPS = 2;
+export const OUTBOUND_HOPS = 1;
 
 export type RoutePoint = {
   id: PlaceId;
