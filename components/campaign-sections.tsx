@@ -40,36 +40,46 @@ export function Congress() {
 
 export function Papers() {
   const { dict, locale } = useLanguage();
-  const paper = PAPERS.first;
-  const authors = locale === "en" ? paper.authorsEn : paper.authors;
   return (
     <section id="trabajos" className="shell py-16 md:py-24">
       <p className="mono-label text-primary">{dict.papers.kicker}</p>
       <h2 className="mt-3 max-w-[16ch] text-[clamp(32px,8vw,56px)] font-semibold tracking-[-0.05em]">
         <AnimatedLetters text={dict.papers.title} />
       </h2>
-      <article className="mt-8 rounded-[28px] border border-border bg-card p-6 md:p-10">
-        <p className="mono-label text-primary">{paper.code}</p>
-        <h3 className="mt-3 text-[clamp(24px,4vw,36px)] font-semibold tracking-tight">{paper.title}</h3>
-        <p className="mt-3 max-w-[60ch] text-muted-foreground">{paper.subtitle}</p>
-        <p className="mt-5 text-sm">{authors}</p>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {dict.papers.affiliation}: {paper.affiliation}
-        </p>
-        <p className="mt-6 max-w-[62ch] text-[16px] leading-relaxed text-muted-foreground">
-          {dict.papers.firstBody}
-        </p>
-        {paper.abstractUrl ? (
-          <a
-            href={paper.abstractUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex min-h-11 items-center rounded-full bg-foreground px-5 font-mono text-[10px] font-semibold tracking-[0.1em] text-background"
-          >
-            {dict.papers.abstract}
-          </a>
-        ) : null}
-      </article>
+      <div className="mt-8 grid gap-4">
+        {PAPERS.map((paper) => {
+          const keywords = dict.papers.keywordLists[paper.id];
+          return (
+            <article key={paper.id} className="rounded-[28px] border border-border bg-card p-6 md:p-10">
+              <p className="mono-label text-primary">{paper.code}</p>
+              <h3 className="mt-3 text-[clamp(24px,4vw,36px)] font-semibold tracking-tight">{paper.title}</h3>
+              <p className="mt-3 max-w-[60ch] text-muted-foreground">{paper.subtitle}</p>
+              <p className="mt-5 text-sm">{locale === "en" ? paper.authorsEn : paper.authors}</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {dict.papers.affiliation}: {paper.affiliation}
+              </p>
+              <p className="mt-6 max-w-[62ch] text-[16px] leading-relaxed text-muted-foreground">
+                {dict.papers.bodies[paper.id]}
+              </p>
+              {keywords ? (
+                <p className="mt-4 max-w-[62ch] text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">{dict.papers.keywords}:</span> {keywords}
+                </p>
+              ) : null}
+              {paper.abstractUrl ? (
+                <a
+                  href={paper.abstractUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex min-h-11 items-center rounded-full bg-foreground px-5 font-mono text-[10px] font-semibold tracking-[0.1em] text-background"
+                >
+                  {dict.papers.abstract}
+                </a>
+              ) : null}
+            </article>
+          );
+        })}
+      </div>
     </section>
   );
 }

@@ -51,8 +51,18 @@ const campaign = {
       affiliation: "Afiliación",
       code: "Código",
       abstract: "Ver abstract en el directorio del IAC",
-      firstBody:
-        "El trabajo examina la evidencia sobre los efectos sociales del vuelo espacial comercial mediante casos de reutilización de vehículos, materiales, servicios satelitales y educación universitaria. Analiza tanto sus aplicaciones como las limitaciones para demostrar beneficios sociales y atribuirlos a estas actividades.",
+      keywords: "Palabras clave",
+      bodies: {
+        societal:
+          "El trabajo examina la evidencia sobre los efectos sociales del vuelo espacial comercial mediante casos de reutilización de vehículos, materiales, servicios satelitales y educación universitaria. Analiza tanto sus aplicaciones como las limitaciones para demostrar beneficios sociales y atribuirlos a estas actividades.",
+        honeycomb:
+          "Las cargas dinámicas del lanzamiento y las microvibraciones en órbita afectan la precisión de instrumentos sensibles, como sistemas ópticos y sensores. El trabajo evalúa paneles sándwich de panal (honeycomb) como plataformas de aislamiento pasivo, comparando núcleos hexagonales, de densidad gradual y auxéticos mediante diseño CAD paramétrico y análisis por elementos finitos (modal y armónico). Los resultados preliminares indican que las topologías de densidad variable y auxéticas reducen los picos de transmisibilidad y absorben más energía sin sacrificar la relación resistencia-peso.",
+      },
+      keywordLists: {
+        societal: "",
+        honeycomb:
+          "Microdinámica, atenuación de vibraciones, estructuras honeycomb, análisis modal, cargas útiles de naves espaciales",
+      },
     },
     story: {
       kicker: "mi historia",
@@ -163,8 +173,18 @@ const campaign = {
       affiliation: "Affiliation",
       code: "Code",
       abstract: "View abstract in the IAC directory",
-      firstBody:
-        "The paper examines evidence on the social effects of commercial spaceflight through cases of vehicle reuse, materials, satellite services and university education. It analyzes both applications and the limits of demonstrating social benefits and attributing them to these activities.",
+      keywords: "Keywords",
+      bodies: {
+        societal:
+          "The paper examines evidence on the social effects of commercial spaceflight through cases of vehicle reuse, materials, satellite services and university education. It analyzes both applications and the limits of demonstrating social benefits and attributing them to these activities.",
+        honeycomb:
+          "Launch loads and on-orbit micro-vibrations degrade the precision of sensitive payloads such as optical systems and sensors. The paper evaluates honeycomb sandwich panels as passive isolation platforms, comparing hexagonal, gradient-density and auxetic cores through parametric CAD design and finite element analysis (modal and harmonic). Preliminary results suggest that variable-density and auxetic topologies reduce transmissibility peaks and absorb more energy without compromising the strength-to-weight ratio.",
+      },
+      keywordLists: {
+        societal: "",
+        honeycomb:
+          "Microdynamics, Vibration Attenuation, Honeycomb Structures, Modal Analysis, Spacecraft Payloads",
+      },
     },
     story: {
       kicker: "my story",

@@ -43,8 +43,9 @@ export const DONATIONS = {
   evmEnabled: false,
 } as const;
 
-export const PAPERS = {
-  first: {
+export const PAPERS = [
+  {
+    id: "societal",
     title: "The Societal Impact of Commercial Spaceflight",
     subtitle:
       "A Critical Review of Technology Transfer, Satellite Services, and University Education.",
@@ -54,8 +55,18 @@ export const PAPERS = {
     code: "IAC-26,E5,IP,13,x116987",
     abstractUrl: "",
   },
-  second: null,
-} as const;
+  {
+    id: "honeycomb",
+    title: "Vibration Attenuation in Honeycombs Structures",
+    subtitle:
+      "IAF Materials and Structures Symposium (C2) · Interactive Presentations (IP)",
+    authors: "Diego Hernández y Elias Cervantes",
+    authorsEn: "Diego Hernández and Elias Cervantes",
+    affiliation: "Facultad de Ingeniería, Universidad Nacional Autónoma de México",
+    code: "IAC-26,C2,IP,64,x116963",
+    abstractUrl: "",
+  },
+] as const;
 
 export const PAYMENT_DEFAULTS = {
   sinpePhone: DONATIONS.speiClabe,
