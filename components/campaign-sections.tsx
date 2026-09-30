@@ -94,8 +94,8 @@ export function Story() {
           <img
             src="/photo.jpg"
             alt={dict.story.photoAlt}
-            width={864}
-            height={1152}
+            width={853}
+            height={852}
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover object-[center_18%] grayscale contrast-[1.05]"
           />

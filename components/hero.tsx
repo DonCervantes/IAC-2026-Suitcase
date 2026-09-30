@@ -56,8 +56,8 @@ export function Hero() {
           <img
             src="/photo.jpg"
             alt={dict.story.photoAlt}
-            width={864}
-            height={1152}
+            width={853}
+            height={852}
             className="absolute inset-0 h-full w-full object-cover object-[center_18%] grayscale contrast-[1.05]"
           />
         </div>
