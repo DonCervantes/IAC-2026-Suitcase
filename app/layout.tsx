@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import { BagPhotoWarmup } from "@/components/bag-photo-warmup";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -18,25 +17,24 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:43147"),
-  title: "Tu marca, rumbo al IAC 2026 | Daniel Cruz Cervantes",
+  title: "De México al IAC 2026 | Elias Cervantes",
   description:
-    "22 posiciones en el equipaje de Daniel Adrian Elias Cruz Cervantes rumbo al International Astronautical Congress 2026 en Antalya, Turquía. México → Europa → IAC. Meta $14,999 MXN.",
+    "Ayuda a Elias Cervantes, estudiante de Ingeniería Aeroespacial en la UNAM, a participar en el International Astronautical Congress 2026 en Antalya.",
   openGraph: {
-    title: "Tu marca viaja conmigo al IAC 2026",
+    title: "De México al IAC 2026",
     description:
-      "Patrocina un espacio en mi maleta hacia el IAC 2026 en Antalya. México → Europa → Turquía. SPEI o USDC.",
+      "Recaudación para participar en el IAC 2026 en Antalya. Meta $14,999 MXN. SPEI, Solana o Stellar.",
     type: "website",
     locale: "es_MX",
-    siteName: "IAC 2026 Suitcase",
+    siteName: "Elias Cervantes · IAC 2026",
   },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tu marca, rumbo al IAC 2026",
-    description: "22 spots en mi equipaje hacia Antalya. SPEI o USDC. Meta $14,999 MXN.",
-    creator: "@tu-usuario",
+    title: "De México al IAC 2026",
+    description: "Apoya la participación de Elias Cervantes en el IAC 2026. Meta $14,999 MXN.",
   },
 };
 
@@ -49,11 +47,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
-        <link rel="preload" as="image" href="/suitcase-front.png" type="image/png" fetchPriority="high" />
-        <link rel="preload" as="image" href="/suitcase-side.png" type="image/png" />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <BagPhotoWarmup />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

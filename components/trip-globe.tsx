@@ -15,6 +15,7 @@ import {
   TextureLoader,
 } from "three";
 import {
+  PLACE_IDS,
   PLACES,
   ROUTE_ARCS,
   ROUTE_VISITS,
@@ -86,10 +87,7 @@ export default function TripGlobe({
 
   const rings = useMemo(() => {
     if (!activeCoords) {
-      return [
-        { lat: PLACES.mex.lat, lng: PLACES.mex.lng },
-        { lat: PLACES.ayt.lat, lng: PLACES.ayt.lng },
-      ];
+      return PLACE_IDS.map((id) => ({ lat: PLACES[id].lat, lng: PLACES[id].lng }));
     }
     return [{ lat: activeCoords.lat, lng: activeCoords.lng }];
   }, [activeCoords]);

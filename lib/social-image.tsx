@@ -5,21 +5,11 @@ import { join } from "node:path";
 export const ogSize = { width: 1200, height: 630 };
 export const promoSize = { width: 1080, height: 1080 };
 export const ogAlt =
-  "iac2026: 22 posiciones en una maleta rumbo al IAC 2026 en Antalya. Meta $14,999 MXN.";
+  "De México al IAC 2026: Elias Cervantes, Ingeniería Aeroespacial UNAM. Meta $14,999 MXN.";
 
-const SPOTS = [
-  { id: "01", left: "23.8%", top: "27.6%", width: "52.8%", height: "17.18%" },
-  { id: "02", left: "23.8%", top: "45.83%", width: "25.7%", height: "15.74%" },
-  { id: "03", left: "50.9%", top: "45.83%", width: "25.7%", height: "15.74%" },
-  { id: "04", left: "23.8%", top: "62.62%", width: "25.7%", height: "15.74%" },
-  { id: "05", left: "50.9%", top: "62.62%", width: "25.7%", height: "15.74%" },
-  { id: "19", left: "23.8%", top: "79.41%", width: "25.7%", height: "15.74%" },
-  { id: "20", left: "50.9%", top: "79.41%", width: "25.7%", height: "15.74%" },
-] as const;
-
-async function suitcaseSrc() {
-  const file = await readFile(join(process.cwd(), "public/suitcase-front.png"));
-  return `data:image/png;base64,${file.toString("base64")}`;
+async function photoSrc() {
+  const file = await readFile(join(process.cwd(), "public/photo.jpg"));
+  return `data:image/jpeg;base64,${file.toString("base64")}`;
 }
 
 function Logo() {
@@ -40,7 +30,7 @@ function Logo() {
           letterSpacing: 1,
         }}
       >
-        C
+        EC
       </div>
       <div
         style={{
@@ -52,7 +42,7 @@ function Logo() {
           color: "#0b1b4a",
         }}
       >
-        iac2026
+        elias
       </div>
     </div>
   );
@@ -71,7 +61,7 @@ function Headline({ large }: { large?: boolean }) {
           color: "#0b1b4a",
         }}
       >
-        Tu marca, rumbo al
+        De México al
       </div>
       <div
         style={{
@@ -89,105 +79,8 @@ function Headline({ large }: { large?: boolean }) {
   );
 }
 
-function Stats({ compact }: { large?: boolean; compact?: boolean }) {
-  const items = [
-    { value: "22", label: "POSICIONES" },
-    { value: "$45", label: "DESDE" },
-    { value: "3", label: "PIEZAS" },
-  ];
-  return (
-    <div style={{ display: "flex" }}>
-      {items.map((item, index) => (
-        <div
-          key={item.label}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginRight: compact ? 36 : 48,
-            marginLeft: index === 0 ? 0 : 0,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              fontSize: compact ? 36 : 42,
-              fontWeight: 800,
-              color: "#0b1b4a",
-            }}
-          >
-            {item.value}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              marginTop: 4,
-              fontSize: 13,
-              fontWeight: 700,
-              letterSpacing: 2.2,
-              color: "#5c6478",
-            }}
-          >
-            {item.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function Suitcase({ src, height }: { src: string; height: number }) {
-  const width = Math.round(height * 0.867);
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: width + 24,
-        height: height + 24,
-        background: "#ffffff",
-        borderRadius: 28,
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          position: "relative",
-          width,
-          height,
-        }}
-      >
-        <img src={src} alt="" width={width} height={height} style={{ objectFit: "contain" }} />
-        {SPOTS.map((spot) => (
-          <div
-            key={spot.id}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              left: spot.left,
-              top: spot.top,
-              width: spot.width,
-              height: spot.height,
-              background: "rgba(255,255,255,0.94)",
-              border: "1px solid #2c3fd1",
-              borderRadius: 8,
-              color: "#0b1b4a",
-              fontSize: 14,
-              fontWeight: 800,
-            }}
-          >
-            {spot.id}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export async function renderOgImage() {
-  const src = await suitcaseSrc();
+  const src = await photoSrc();
   return new ImageResponse(
     <div
       style={{
@@ -223,29 +116,36 @@ export async function renderOgImage() {
             maxWidth: 560,
           }}
         >
-          22 spots en mi maleta rumbo al IAC 2026. México → Antalya.
-        </div>
-        <div style={{ display: "flex", marginTop: 28 }}>
-          <Stats />
+          Ayúdame a llegar al IAC.
         </div>
         <div
           style={{
             display: "flex",
             marginTop: 28,
+            fontSize: 42,
+            fontWeight: 800,
+            color: "#0b1b4a",
+          }}
+        >
+          $14,999 MXN
+        </div>
+        <div
+          style={{
+            display: "flex",
+            marginTop: 8,
             fontSize: 16,
             fontWeight: 700,
             letterSpacing: 1.6,
             color: "#2c3fd1",
           }}
         >
-          SPEI · USDC · IAC 2026
+          SPEI · SOLANA · STELLAR · GOFUNDME
         </div>
       </div>
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
+          alignItems: "center",
           justifyContent: "center",
           flex: 1,
         }}
@@ -253,17 +153,16 @@ export async function renderOgImage() {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            marginBottom: 12,
-            fontSize: 14,
-            fontWeight: 700,
-            letterSpacing: 2,
-            color: "#147a4b",
+            width: 360,
+            height: 480,
+            overflow: "hidden",
+            borderRadius: 28,
+            border: "1px solid #dfe3ee",
+            background: "#ffffff",
           }}
         >
-          ● 22 SPOTS AVAILABLE
+          <img src={src} alt="" width={360} height={480} style={{ objectFit: "cover", objectPosition: "center 18%" }} />
         </div>
-        <Suitcase src={src} height={520} />
       </div>
     </div>,
     { ...ogSize },
@@ -271,7 +170,7 @@ export async function renderOgImage() {
 }
 
 export async function renderPromoImage() {
-  const src = await suitcaseSrc();
+  const src = await photoSrc();
   return new ImageResponse(
     <div
       style={{
@@ -299,10 +198,19 @@ export async function renderPromoImage() {
           marginTop: 12,
         }}
       >
-        <Suitcase src={src} height={560} />
-      </div>
-      <div style={{ display: "flex", marginTop: 8 }}>
-        <Stats compact />
+        <div
+          style={{
+            display: "flex",
+            width: 420,
+            height: 520,
+            overflow: "hidden",
+            borderRadius: 28,
+            border: "1px solid #dfe3ee",
+            background: "#ffffff",
+          }}
+        >
+          <img src={src} alt="" width={420} height={520} style={{ objectFit: "cover", objectPosition: "center 18%" }} />
+        </div>
       </div>
       <div
         style={{
@@ -314,7 +222,7 @@ export async function renderPromoImage() {
           color: "#2c3fd1",
         }}
       >
-        SPEI · USDC · IAC 2026
+        META $14,999 MXN · IAC 2026 ANTALYA
       </div>
     </div>,
     { ...promoSize },
